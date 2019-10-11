@@ -9,6 +9,7 @@ output "name" {
 }
 
 output "object" {
-  description = "Output the full object"
-  value = azurerm_automation_account.auto_account
+  description   = "Output the full object"
+  value         = azurerm_automation_account.auto_account
+  sensitive     = true
 }
