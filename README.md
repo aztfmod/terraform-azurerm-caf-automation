@@ -6,8 +6,9 @@ Creates an Azure Automation Account
 Reference the module to a specific version (recommended):
 ```hcl
 module "automation" {
-    source                  = "git://github.com/aztfmod/automation.git?ref=v0.1"
-  
+    source  = "aztfmod/caf-automation/azurerm"
+    version = "0.1.0"
+    
     auto_name               = var.auto_account
     resource_group_name     = var.rg
     location                = var.location["region1"] 
