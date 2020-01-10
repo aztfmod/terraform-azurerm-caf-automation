@@ -7,22 +7,8 @@ Reference the module to a specific version (recommended):
 ```hcl
 module "automation" {
     source  = "aztfmod/caf-automation/azurerm"
-    version = "0.1.0"
+    version = "0.x.y"
     
-    auto_name               = var.auto_account
-    resource_group_name     = var.rg
-    location                = var.location["region1"] 
-    tags                    = var.tags
-    la_workspace_id         = var.log_analytics_workspace.id
-    diagnostics_map         = var.diagnostics_map
-}
-```
-
-Or get the latest version
-```hcl
-module "automation" {
-    source                  = "git://github.com/aztfmod/automation.git?ref=latest"
-  
     auto_name               = var.auto_account
     resource_group_name     = var.rg
     location                = var.location["region1"] 
@@ -141,30 +127,24 @@ diagnostics_settings = {
 }
 ```
 
-
-
-# Output
-## object
-Returns the resource object of the created azure automation account.
+## convention
+(Required) Naming convention to be used.
 ```hcl
-output "object" {
-  value = azurerm_automation_account.auto_account
+variable "convention" {
+  description = "(Required) Naming convention used"
 }
 ```
-
-## name
-Returns the resource name of the created azure automation account.
+Example
 ```hcl
-output "name" {
-  value = azurerm_automation_account.auto_account.name
-}
-
+convention = "cafclassic"
 ```
 
-## id
-Returns the resource ID of the created azure automation account.
-```hcl
-output "id" {
-  value = azurerm_automation_account.auto_account.id
-}
-```
+
+
+# Outputs
+
+| Name | Type | Description | 
+| -- | -- | -- | 
+| object | object | Returns the full object of the created Azure automation account. |
+| name | string | Returns the name of the created Azure automation account. |
+| id | string | Returns the ID of the created Azure automation account. | 
