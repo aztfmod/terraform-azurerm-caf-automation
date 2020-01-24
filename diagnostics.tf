@@ -1,6 +1,6 @@
 module "diagnostics_automation" {
   source  = "aztfmod/caf-diagnostics/azurerm"
-  version = "0.1.1"
+  version = "1.0.0"
   
     name                            = azurerm_automation_account.auto_account.name
     resource_id                     = azurerm_automation_account.auto_account.id
