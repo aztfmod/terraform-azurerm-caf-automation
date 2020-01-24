@@ -1,5 +1,5 @@
 locals {
-    convention = "random"
+    convention = "cafrandom"
     name = "caftest"
     location = "southeastasia"
     prefix = ""
@@ -19,9 +19,8 @@ locals {
             "product"   = "OMSGallery/NetworkMonitoring"
         },
     }
-
+    enable_event_hub = false
     automation_name = "asr"
-
     diagnostics_settings = {
     log = [
                 # ["Category name",  "Diagnostics Enabled(true/false)", "Retention Enabled(true/false)", Retention_period] 

@@ -1,4 +1,4 @@
-variable "resource_group_name" {
+variable "rg" {
   description = "(Required) Resource group for automation account"
 }
 
