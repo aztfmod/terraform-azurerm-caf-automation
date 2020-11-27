@@ -5,7 +5,8 @@ aztfmod/terraform-azurerm-caf-apim
 # **READ ME**
 Thanks for your interest in Cloud Adoption Framework for Azure landing zones on Terraform.
 This module is now deprecated and no longer maintained. You can still clone it, fork it, use it, but we wont maintain it. 
-As part of Cloud Adoption Framework landing zones for Terraform, we have migrated to a single module model, which you can find here: https://github.com/aztfmod/terraform-azurerm-caf and on the Terraform registry: https://registry.terraform.io/modules/aztfmod/caf/azurerm 
+
+As part of Cloud Adoption Framework landing zones for Terraform, we have moved to a single module model, which you can find here: https://github.com/aztfmod/terraform-azurerm-caf and on the Terraform registry: https://registry.terraform.io/modules/aztfmod/caf/azurerm 
 
 In Terraform 0.13 you can now call directly submodules easily with the following syntax:
 ```hcl
